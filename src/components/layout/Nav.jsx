@@ -11,22 +11,35 @@ export default function Nav() {
         <div className={styles.header_container}>
             <span className={styles.logo}>Logo</span>
             <CiMenuBurger
-                className={`${styles.menu} ${barActive ? styles.active : ""}`}
+                className={`${styles.menu} ${barActive ? (() => {
+                    document.body.style.overflow = 'hidden';
+                    return styles.active;
+                })() : (() => {
+                    document.body.style.overflow = 'unset';
+                    return "";
+                })()
+                    }`}
                 onClick={() => { setBarActive(!barActive) }}
             />
-            {barActive && <div className={styles.overlay}></div>}
+            {barActive && <div className={styles.overlay} onClick={() => {
+                setBarActive(false)
+            }}></div>}
             <nav className={barActive ? `${styles.active}` : ""}>
-                <ul>
+                <ul onClick={() => { setBarActive(false) }}>
                     <Navigation
-                        href="#"
+                        href="#sobre"
                         title="Sobre"
                     />
                     <Navigation
-                        href="#"
+                        href="#skills"
                         title="Skills"
                     />
                     <Navigation
-                        href="#"
+                        href="#projects"
+                        title="Projetos"
+                    />
+                    <Navigation
+                        href="#contact"
                         title="Contato"
                     />
                 </ul>
