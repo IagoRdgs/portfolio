@@ -1,7 +1,5 @@
 import styles from "./About.module.css";
 
-
-
 import hero from "../../../../../assets/hero-programming.svg";
 
 export default function About() {

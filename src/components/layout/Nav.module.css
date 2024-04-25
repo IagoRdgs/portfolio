@@ -2,7 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.4rem;
+    padding: 1rem 1.4rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .logo,
@@ -13,7 +16,6 @@
 
     transition: all .4s ease-in-out;
     cursor: pointer;
-    position: sticky;
 }
 
 nav {
@@ -55,6 +57,7 @@ nav.active {
 
 nav ul {
     list-style: none;
+    padding: 0;
 }
 
 nav ul li a {

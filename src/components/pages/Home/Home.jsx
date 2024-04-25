@@ -1,6 +1,6 @@
 import styles from "./Home.module.css";
 
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 import Nav from "../../layout/Nav";
 

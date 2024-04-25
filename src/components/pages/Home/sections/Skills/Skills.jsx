@@ -5,10 +5,10 @@ import { Container, Row, Col } from "react-bootstrap";
 
 export default function Skills() {
     return (
-        <section className={styles.skills_container}>
+        <section id="skills" className={styles.skills_container}>
             <Container>
                 <h2>Skills</h2>
-                <ul className={styles.skills_list}>
+                <ul className={styles.skills_list} >
                     <Row>
                         <Col md={6}>
                             <SkillItem
