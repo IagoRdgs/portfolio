@@ -44,3 +44,9 @@
     text-align: center;
     width: 70%;
 }
+
+.buttons_container {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+}

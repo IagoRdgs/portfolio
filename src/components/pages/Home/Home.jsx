@@ -2,10 +2,11 @@ import styles from "./Home.module.css";
 
 import { Container } from "react-bootstrap";
 
-import Nav from "../../layout/Nav";
+import Nav from "../../layout/navigation/Nav";
 
 import About from "./sections/About/About";
 import Skills from "./sections/Skills/Skills";
+import Projects from "./sections/projects/Projects";
 
 export default function Home() {
 
@@ -18,6 +19,7 @@ export default function Home() {
                 <main>
                     <About />
                     <Skills />
+                    <Projects />
                 </main>
 
             </Container>
