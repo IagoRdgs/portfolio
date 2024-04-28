@@ -1,7 +1,7 @@
 import styles from "./Button.module.css";
 
-export default function Button({text, href, download}) {
+export default function Button({text, href, download, target}) {
     return (
-        <a className={styles.button} href={href} target="_blank" download={download}>{text}</a>
+        <a className={styles.button} href={href} target={target} download={download}>{text}</a>
     );
 };

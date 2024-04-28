@@ -7,16 +7,11 @@ import projetoimg from "../../../../../assets/hero-programming.svg";
 
 export default function Projects() {
     return (
-        <section id="projects" className={styles.carousel_container}>
+        <section id="projects" className={styles.project_container}>
             <h2>Projetos</h2>
-            <Container>
-                <ProjectCard
-                    projectName="Projeto Teste"
-                    projectDescription="este é um teste para ver como o card está se comportando."
-                    projectImage={projetoimg}
-                    projectLink="https://hipnos-costs.vercel.app"
-                />
-            </Container>
+            <ProjectCard
+                image={projetoimg}
+            />
         </section>
     );
 };

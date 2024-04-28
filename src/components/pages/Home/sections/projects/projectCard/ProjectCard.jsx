@@ -1,33 +1,30 @@
 import styles from "./ProjectCard.module.css";
 
 import Button from "../../../../../layout/button/Button";
-import { Container } from "react-bootstrap";
 
-export default function ProjectCard({ projectName, projectDescription, projectImage, alt, projectLink , codeLink }) {
+export default function ProjectCard({ image }) {
     return (
-        <>
-            <Container>
-                <div className={styles.card_container}>
-                    <div className={styles.card}>
-                        <div className={styles.card_info}>
-                            <h3>{projectName}</h3>
-                            <p>{projectDescription}</p>
-                        </div>
-                        <img src={projectImage} alt={alt} />
-                        <div className={styles.card_buttons}>
-                            <Button
-                                text="Projeto"
-                                href={projectLink}
-                            />
-                            <Button
-                                text="Código"
-                                href={codeLink}
-                            />
-                        </div>
-                    </div>
+        <section className={styles.card_container}>
+            <div className={styles.card}>
+                <div className={styles.card_header}>
+                    <h3>Nome do projeto</h3>
+                    <p>Descrição do projeto Descrição do projetoDescrição do projetoDescrição do projetoDescrição do projetoDescrição do projetoDescrição do projetoDescrição do projetoDescrição do projetoDescrição do projetoDescrição do projetoDescrição do projeto</p>
                 </div>
 
-            </Container>
-        </>
+                <div className={styles.card_image}>
+                    <img src={image} alt="" />
+                </div>
+            </div>
+                <div className={styles.card_buttons}>
+                    <Button
+                        text="Projeto"
+                        href={null}
+                    />
+                    <Button
+                        text="Código"
+                        href={null}
+                    />
+                </div>
+        </section>
     );
 };
