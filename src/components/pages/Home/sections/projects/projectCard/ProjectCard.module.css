@@ -34,9 +34,8 @@
 }
 
 .card_header p {
-    overflow: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
-    overflow-wrap: ;
     font-size: 1.2rem;
 }
 
