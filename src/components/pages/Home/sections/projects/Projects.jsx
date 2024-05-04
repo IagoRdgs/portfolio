@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 export default function Projects() {
 
     const [repoData, setRepoData] = useState([]);
-    const token = import.meta.env.VITE_GIHTUB_TOKEN;
+    const token = "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";
 
     const apiUrl = "https://api.github.com/users/HipnosM/repos";
 
@@ -33,14 +33,13 @@ export default function Projects() {
         <section id="projects" className={styles.project_container}>
             <h2>Projetos</h2>
             <Carousel className={styles.carousel} wrap={false} interval={null}>
-
-                {repoData
-                    .map((repo) => (
+                {repoData.map((repo) => (
                         <CarouselItem>
                             <ProjectCard
                                 key={repo.id}
                                 projectName={repo.name}
                                 projectImage={projetoimg}
+                                codeLink={repo.html_url}
                             />
                         </CarouselItem>
                     ))

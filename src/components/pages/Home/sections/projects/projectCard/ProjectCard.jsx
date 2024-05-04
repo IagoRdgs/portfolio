@@ -2,7 +2,7 @@ import styles from "./ProjectCard.module.css";
 
 import Button from "../../../../../layout/button/Button";
 
-export default function ProjectCard({ projectImage, projectName, projectDesc }) {
+export default function ProjectCard({ projectImage, projectName, codeLink }) {
     return (
         <section className={styles.card_container}>
             <div className={styles.card}>
@@ -19,10 +19,12 @@ export default function ProjectCard({ projectImage, projectName, projectDesc }) 
                     <Button
                         text="Projeto"
                         href={null}
+                        onClick={() => alert("em desenvolvimento")}
                     />
                     <Button
                         text="Código"
-                        href={null}
+                        href={codeLink}
+                        target="_blank"
                     />
                 </div>
         </section>
