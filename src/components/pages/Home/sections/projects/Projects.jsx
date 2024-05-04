@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 export default function Projects() {
 
     const [repoData, setRepoData] = useState([]);
-    const token = "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";
+    const token = import.meta.env.VITE_GIHTUB_TOKEN;
 
     const apiUrl = "https://api.github.com/users/HipnosM/repos";
 
