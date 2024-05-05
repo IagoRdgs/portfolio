@@ -11,7 +11,7 @@ export default function Projects() {
     const [repoData, setRepoData] = useState([]);
     const [readmeData, setReadmeData] = useState([]);
 
-    const token = import.meta.env.VITE_GITHUB_TOKEN;
+    const token = import.meta.env.VITE_GITHUB_TOKEN
     const user = "HipnosM";
 
     const apiUrl = `https://api.github.com/users/${user}/repos`;
