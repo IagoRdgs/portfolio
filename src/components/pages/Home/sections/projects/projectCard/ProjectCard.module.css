@@ -25,6 +25,7 @@
     align-items: center;
     padding: 1rem 1.5rem;
     height: 12rem;
+    width: 100%;
     gap: .5rem;
 }
 
@@ -37,6 +38,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     font-size: 1.2rem;
+    max-width: 100%;
 }
 
 .card_image {
