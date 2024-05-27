@@ -52,10 +52,11 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
+    padding: 1rem 1.5rem;
 }
 
 .card_image img {
-    max-width: 98%;
+    max-width: 100%;
     object-fit: cover;
     border-radius: .5rem;
 }
