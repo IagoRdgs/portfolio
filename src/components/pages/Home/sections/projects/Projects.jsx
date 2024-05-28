@@ -1,33 +1,42 @@
 import styles from "./Projects.module.css";
 
-import { Carousel, CarouselItem, CarouselCaption } from "react-bootstrap";
 import ProjectCard from "./projectCard/ProjectCard";
 
 import projects from "../../../../../data/projects";
+import { Container } from "react-bootstrap";
+import { useState } from "react";
+import Project from "./projectCard/Project";
 
 export default function Projects() {
 
+    const [openProject, setOpenProject] = useState(false);
 
     return (
         <section id="projects" className={styles.project_container}>
-            <h2>Projetos</h2>
-            <div className={styles.carousel_container}>
-                <Carousel className={styles.carousel} wrap={false} interval={null}>
+            <Container>
+                <h2>Projetos</h2>
+                <div className={styles.project}>
                     {projects.map((project) => (
-                        <CarouselItem key={project.id}>
-                            <ProjectCard
-                                projectName={project.name}
-                                projectDesc={project.description}
-                                projectImage={project.image}
-                                projecTechnologies={project.technologies}
-                                projectLink={project.links.site}
-                                codeLink={project.links.github}
-                            />
-                        </CarouselItem>
-                    ))
-                    }
-                </Carousel>
-            </div>
+                        <ProjectCard
+                            key={project.id}
+                            project={project}
+                            onClick={() => {
+                                setOpenProject(project);
+                                document.body.style.overflow = "hidden";
+                            }}
+                        />
+                    ))}
+                    {openProject && (
+                        <Project
+                            project={openProject}
+                            onClick={() => {
+                                setOpenProject(null);
+                                document.body.style.overflow = "unset";
+                            }}
+                        />
+                    )}
+                </div>
+            </Container>
         </section >
     );
 };
