@@ -2,7 +2,7 @@ import styles from "./Projects.module.css";
 
 import ProjectCard from "./projectCard/ProjectCard";
 
-import projects from "../../../../../data/projects";
+import projects from "../../../../../data/projectsList";
 import { Container } from "react-bootstrap";
 import { useState } from "react";
 import Project from "./projectCard/Project";
