@@ -15,7 +15,7 @@ export default function Home() {
         const navbar = document.querySelector('header');
 
         const handleScroll = () => {
-            let scrollTop = window.scrollY || document.documentElement.scrollTop;
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
 
             if (scrollTop > lastScrollTop) {
                 // Scrolling down
