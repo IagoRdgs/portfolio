@@ -1,6 +1,6 @@
 .button {
     color: #ffffffc4;
-    background-color: rgb(240, 105, 56);
+    background-color: #7a1779;
     text-decoration: none;
     font-size: 1.6rem;
     padding: 1rem 2rem;
@@ -14,7 +14,7 @@
 
 a:hover, 
 .button:hover {
-    background-color: rgb(206, 46, 18);
+    background-color: #5d125b;
     color: rgb(255, 255, 255);
-    transition: all .3s ease;
+    transition: all .3s linear;
 }

@@ -2,15 +2,17 @@ import styles from "./Nav.module.css";
 
 import { useState } from "react";
 
-import { CiMenuBurger } from "react-icons/ci";
+import { SlMenu } from "react-icons/sl";
 
 export default function Nav() {
     const [barActive, setBarActive] = useState();
 
     return (
         <div className={styles.header_container}>
-            <span className={styles.logo}>Logo</span>
-            <CiMenuBurger
+            <div className={styles.logo}>
+                <span >IR</span>
+            </div>
+            <SlMenu
                 className={`${styles.menu} ${barActive ? (() => {
                     document.body.style.overflow = 'hidden';
                     return styles.active;

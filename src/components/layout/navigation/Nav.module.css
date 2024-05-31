@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 .header_container {
     display: flex;
     justify-content: space-between;
@@ -9,11 +11,25 @@
 .logo,
 .menu {
     font-size: 2.8rem;
-    font-weight: bold;
     color: #fff;
 
     transition: all .4s ease-in-out;
     cursor: pointer;
+}
+
+.logo {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo span {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: 900;
 }
 
 nav {
@@ -32,7 +48,7 @@ nav.active {
     width: 40%;
     transition: all 0.38s ease-in-out;
     z-index: 999;
-    
+
 }
 
 .menu.active {
@@ -56,15 +72,18 @@ nav.active {
 nav ul {
     list-style: none;
     padding: 0;
+    height: 100%;
+    background-color: #410c3d;
 }
 
 nav ul li a {
     display: flex;
     text-decoration: none;
     color: #fff;
+
     &:hover {
         background-color: rgba(0, 0, 0, 0.5);
-        transition: all 0.3s ease-in-out;
+        transition: all 0.4s linear;
     }
 }
 
