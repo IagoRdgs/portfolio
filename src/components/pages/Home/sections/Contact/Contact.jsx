@@ -1,9 +1,7 @@
 import styles from "../Contact/Contact.module.css";
 
-import { MdEmail, MdWhatsapp } from "react-icons/md";
-
 import { Container } from "react-bootstrap";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
     return (
@@ -26,7 +24,28 @@ export default function Contact() {
                         <button type="submit">Enviar</button>
                     </form>
                 </div>
+
             </Container>
+            <div className={styles.social_media}>
+                <ul className={styles.social_media_list}>
+                    <li>
+                        <a href="https://www.linkedin.com/in/iago-hipnos">
+                            <FaLinkedin />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/tryiago">
+                            <FaInstagram />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/5585981463192">
+                            <FaWhatsapp />
+                        </a>
+                    </li>
+                </ul>
+                <p>&copy; 2024 Iago Rodrigues. Todos os direitos reservados.</p>
+            </div>
         </section>
     );
 };

@@ -4,8 +4,12 @@
     display: grid;
     grid-template: auto / 1fr;
     margin: 0 auto;
-    padding: 4rem 1.4rem;
+
     background-color: #410c3d;
+}
+
+.contact_container> :not(.social_media) {
+    padding: 4rem 1.4rem;
 }
 
 .contact_container .contact_content {
@@ -23,7 +27,7 @@
 }
 
 .contact_container h2 {
-     font-size: 2.6rem;
+    font-size: 2.6rem;
 }
 
 .contact_container .contact_content .form_contact {
@@ -67,7 +71,7 @@
     transition: all .2s ease;
 }
 
-.contact_container .contact_content .form_contact .input_group input:focus + label {
+.contact_container .contact_content .form_contact .input_group input:focus+label {
     top: -.7rem;
     left: 1rem;
     background-color: #410c3d;
@@ -82,17 +86,79 @@
     background-color: #7a1779;
     border-radius: .5rem;
     cursor: pointer;
+
     &:hover {
         background-color: rgba(0, 0, 0, 0.5);
         transition: all 0.3s linear;
     }
 }
 
+.contact_container .social_media {
+    background-color: #7a1779;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    justify-items: center;
+}
+
+.contact_container .social_media .social_media_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    height: 10vh;
+}
+
+.contact_container .social_media .social_media_list li a {
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 1.4rem;
+    background-color: #410c3d;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contact_container .social_media p {
+    color: #410c3d;
+    font-weight: bold;
+    max-width: 80%;
+    text-align: center;
+}
+
+.contact_container .social_media .social_media_list li:nth-child(1) a {
+    &:hover {
+        background-color: #0e76a8;
+        transition: all .3s ease;
+    }
+}
+
+.contact_container .social_media .social_media_list li:nth-child(2) a {
+    &:hover {
+        background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+        transition: all .3s ease;
+    }
+}
+
+.contact_container .social_media .social_media_list li:nth-child(3) a {
+    &:hover {
+        background-color: #25D366;
+        transition: all .3s ease;
+    }
+}
+
+
 @media screen and (min-width: 860px) {
     .contact_container .contact_content .form_contact {
         max-width: 70.5rem;
         margin: 3rem auto;
     }
+
     .contact_container .contact_content p:nth-child(1) {
         text-align: center;
     }

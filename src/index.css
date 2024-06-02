@@ -4,9 +4,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 70px;
-  padding-top: 70px;
-  transition: padding 0.2s ease;
 }
 
 * {
@@ -29,6 +26,10 @@ header {
   transition: all 0.3s ease-in-out;
   z-index: 1000;
   background-color: #24061e;
+}
+
+section {
+  margin-bottom: 7rem;
 }
 
 @media screen and (min-width: 768px) {
