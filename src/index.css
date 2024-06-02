@@ -2,6 +2,12 @@
   font-size: 62.5%;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+  transition: padding 0.3s linear;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,4 +17,21 @@
 
 body {
   background-color: #24061e;
+}
+
+header {
+  position: fixed;
+  height: 70px;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+  background-color: #24061e;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+      background-color: transparent;
+  }
 }

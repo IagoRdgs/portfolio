@@ -1,5 +1,3 @@
-import "./Home.module.css";
-
 import { Container } from "react-bootstrap";
 
 import Nav from "../../layout/navigation/Nav";
