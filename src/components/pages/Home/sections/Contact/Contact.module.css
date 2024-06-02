@@ -1,0 +1,99 @@
+.contact_container {
+    width: 100%;
+    min-height: 50vh;
+    display: grid;
+    grid-template: auto / 1fr;
+    margin: 0 auto;
+    padding: 4rem 1.4rem;
+    background-color: #410c3d;
+}
+
+.contact_container .contact_content {
+    display: grid;
+    grid-template: auto / 1fr;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.4rem;
+}
+
+.contact_container h2,
+.contact_container .contact_content p {
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.contact_container h2 {
+     font-size: 2.6rem;
+}
+
+.contact_container .contact_content .form_contact {
+    margin: 2rem 0;
+    padding-left: 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: #fff;
+}
+
+.contact_container .contact_content .form_contact .input_group {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 1.5rem;
+}
+
+.contact_container .contact_content .form_contact .input_group input {
+    all: unset;
+    box-shadow: 0 0 .15rem .05rem #b1b1b1;
+    border: .1px solid #b1b1b1;
+    border-radius: .5rem;
+    padding: 1rem 1.2rem;
+    line-height: 2rem;
+}
+
+.contact_container .contact_content .form_contact .input_group label {
+    position: absolute;
+    top: -2rem;
+    left: 1rem;
+    transform: translateY(0);
+    padding: 0 .2rem;
+    font-size: 1.2rem;
+    transition: all .2s ease;
+}
+
+.contact_container .contact_content .form_contact .input_group input:focus + label {
+    top: -.7rem;
+    left: 1rem;
+    background-color: #410c3d;
+    font-size: 1rem;
+    border-radius: .8rem;
+}
+
+.contact_container .contact_content .form_contact button {
+    all: unset;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    background-color: #7a1779;
+    border-radius: .5rem;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: all 0.3s linear;
+    }
+}
+
+@media screen and (min-width: 860px) {
+    .contact_container .contact_content .form_contact {
+        max-width: 70.5rem;
+        margin: 3rem auto;
+    }
+    .contact_container .contact_content:nth-child(2) {
+        text-align: center;
+    }
+}
