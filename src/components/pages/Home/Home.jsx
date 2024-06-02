@@ -12,33 +12,29 @@ import Contact from "./sections/Contact/Contact";
 
 export default function Home() {
     useEffect(() => {
-        let lastTouchY = 0;
-        let lastScrollTop = 0;
-        const navbar = document.querySelector('header');
+        const header = document.querySelector('header');
+        const html = document.querySelector('html');
 
-        const handleTouchMove = (event) => {
-            lastTouchY = event.touches[0].clientY;
-        }
+        let lastScrollTop = 0;
 
         const handleScroll = () => {
-            let scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-            if (scrollTop > lastScrollTop || lastTouchY > 0) {
-                // Scrolling down
-                navbar.style.top = '-70px'; // Ajuste a altura da navbar
-            } else {
-                // Scrolling up
-                navbar.style.top = '0';
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                header.style.top = '-70px';
+                html.style.scrollPaddingTop = '0';
+                html.style.paddingTop = '0';
             }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para o caso de scroll negativo no mobile
-            lastTouchY = 0;
+            else {
+                header.style.top = '0';
+                html.style.scrollPaddingTop = '70px';
+                html.style.paddingTop = '70px';
+            }
+            lastScrollTop = scrollTop < 0 ? 0 : scrollTop;
         };
 
-        window.addEventListener('touchmove', handleTouchMove, { passive: true });
         window.addEventListener('scroll', handleScroll);
 
         return () => {
-            window.removeEventListener('touchmove', handleTouchMove);
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);

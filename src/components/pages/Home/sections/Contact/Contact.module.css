@@ -93,7 +93,7 @@
         max-width: 70.5rem;
         margin: 3rem auto;
     }
-    .contact_container .contact_content:nth-child(2) {
+    .contact_container .contact_content p:nth-child(1) {
         text-align: center;
     }
 }
