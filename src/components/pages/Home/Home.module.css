@@ -1,7 +1,6 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 70px;
-    padding-top: 70px;
     transition: padding 0.3s linear;
 }
 

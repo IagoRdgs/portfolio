@@ -22,12 +22,10 @@ export default function Home() {
             if (scrollTop > lastScrollTop) {
                 header.style.top = '-70px';
                 html.style.scrollPaddingTop = '0';
-                html.style.paddingTop = '0';
             }
             else {
                 header.style.top = '0';
                 html.style.scrollPaddingTop = '70px';
-                html.style.paddingTop = '70px';
             }
             lastScrollTop = scrollTop < 0 ? 0 : scrollTop;
         };
