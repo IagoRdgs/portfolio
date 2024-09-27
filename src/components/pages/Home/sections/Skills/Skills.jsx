@@ -13,14 +13,14 @@ export default function Skills() {
                         <Col md={6}>
                             <SkillItem
                                 title="HTML"
-                                amount={93}
+                                amount={95}
                                 type="danger"
                             />
                         </Col>
                         <Col md={6}>
                             <SkillItem
                                 title="CSS"
-                                amount={90}
+                                amount={95}
                                 type="info"
                             />
                         </Col>
@@ -35,18 +35,26 @@ export default function Skills() {
                         </Col>
                         <Col md={6}>
                             <SkillItem
-                                title="Git/GitHub"
-                                amount={80}
-                                type="success"
-                            />
-                        </Col>
-                        <Col md={6}>
-                            <SkillItem
                                 title="React + Vite"
                                 amount={80}
                                 type="info"
                             />
 
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md={6}>
+                        <SkillItem 
+                            title="UX/UI Figma"
+                            amount={60}
+                            type="warning"
+                        /></Col>
+                        <Col md={6}>
+                            <SkillItem
+                                title="Git/GitHub"
+                                amount={95}
+                                type="success"
+                            />
                         </Col>
                     </Row>
                 </ul>
