@@ -1,6 +1,7 @@
 import styles from "./About.module.css";
 
 import hero from "../../../../../assets/profile.png";
+import curriculo from "../../../../../assets/curriculo.pdf"
 import Button from "../../../../layout/button/Button";
 
 export default function About() {
@@ -16,7 +17,7 @@ export default function About() {
                     <div className={styles.buttons_container}>
                         <Button
                             text="Baixar CV"
-                            href="#"
+                            href={curriculo}
                             download="cv.pdf"
                         />
                         <Button
