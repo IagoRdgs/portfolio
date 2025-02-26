@@ -34,7 +34,7 @@ export default function Contact() {
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/tryiago">
+                        <a href="https://www.instagram.com/iago__zz">
                             <FaInstagram />
                         </a>
                     </li>
