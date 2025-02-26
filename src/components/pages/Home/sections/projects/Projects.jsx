@@ -25,7 +25,7 @@ export default function Projects() {
                                 document.body.style.overflow = "hidden";
                             }}
                         />
-                    ))}
+                    )).reverse()}
                     {openProject && (
                         <Project
                             project={openProject}
