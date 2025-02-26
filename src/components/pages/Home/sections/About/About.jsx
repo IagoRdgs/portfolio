@@ -12,8 +12,9 @@ export default function About() {
                     <img src={hero} alt="hero" />
                 </div>
                 <div className={styles.about}>
-                    <h1>Olá, sou <br/><span>Iago Rodrigues!</span></h1>
-                    <p>Graduado em Gestão de Recursos Humanos, sou um desenvolvedor web em formação, com foco em Front-end.</p>
+                    <h1>Olá, sou <br /><span>Iago Rodrigues!</span></h1>
+                    <p>Sou um desenvolvedor Full Stack e Mobile, especializado em criar soluções digitais completas e eficientes. Desde o planejamento até a execução, tenho a experiência necessária para construir aplicações que atendem a todos os requisitos técnicos e de usuário. Estou sempre em busca de aprender, evoluir e aplicar novas tecnologias, garantindo a entrega de produtos de alta qualidade em todas as plataformas. Meu objetivo é criar aplicações de alto desempenho, seguras e escaláveis, com foco nas necessidades reais do usuário.</p>
+
                     <div className={styles.buttons_container}>
                         <Button
                             text="Baixar CV"
