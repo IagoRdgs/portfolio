@@ -96,3 +96,12 @@ nav ul li .title {
     height: 6rem;
     font-size: 1.8rem;
 }
+
+@media screen and (max-width: 480px) {
+    nav.active {
+        width: 47%;
+    }
+    .menu.active {
+        margin-right: 50%;
+    }   
+}
