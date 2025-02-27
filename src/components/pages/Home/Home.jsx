@@ -15,7 +15,8 @@ export default function Home() {
         const section = document.querySelector('section');
 
         let lastScrollTop = 0;
-
+        section.style.paddingTop = '70px';
+        
         const handleScroll = () => {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
             if (scrollTop > lastScrollTop) {
