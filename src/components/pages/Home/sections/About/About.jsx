@@ -13,7 +13,7 @@ export default function About() {
                 </div>
                 <div className={styles.about}>
                     <h1>Olá, sou <br /><span>Iago Rodrigues!</span></h1>
-                    <p>Sou um desenvolvedor Full Stack e Mobile, especializado em criar soluções digitais completas e eficientes. Desde o planejamento até a execução, tenho a experiência necessária para construir aplicações que atendem a todos os requisitos técnicos e de usuário. Estou sempre em busca de aprender, evoluir e aplicar novas tecnologias, garantindo a entrega de produtos de alta qualidade em todas as plataformas. Meu objetivo é criar aplicações de alto desempenho, seguras e escaláveis, com foco nas necessidades reais do usuário.</p>
+                    <p>Sou um desenvolvedor full stack apaixonado por transformar ideias em código. Com experiência em desenvolvimento web e mobile, domino tecnologias como React, Node.js, Express, Prisma e SQL. Além de habilidades técnicas, valorizo boas práticas, colaboração e metodologias ágeis. Estou sempre em busca de novos desafios e aprendizados para criar soluções inovadoras e eficientes.</p>
 
                     <div className={styles.buttons_container}>
                         <Button
