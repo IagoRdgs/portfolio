@@ -146,7 +146,7 @@
 
 .color_express {
     & svg {
-        color: var(--express);
+        color: #000;
     }
 
     & .bar {
