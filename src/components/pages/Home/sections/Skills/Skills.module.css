@@ -6,7 +6,7 @@
     --git: #F1502F;
     --axios: #671DDF;
     --node: #8CC84B;
-    --express: #000;
+    --express: #292929;
     --sql: #00618D;
     --prisma: #0C344B;
     --postgres: #336791;
@@ -146,7 +146,7 @@
 
 .color_express {
     & svg {
-        color: var(--express);
+        color: #000;
     }
 
     & .bar {
