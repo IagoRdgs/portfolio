@@ -11,7 +11,7 @@ export default function Skills() {
         { id: 1, title: "HTML", icon: <FaHtml5 />, customClass: "html", value: 97 },
         { id: 2, title: "CSS", icon: <FaCss3Alt />, customClass: "css", value: 97 },
         { id: 3, title: "JavaScript", icon: <FaJs />, customClass: "js", value: 84 },
-        { id: 4, title: "Node JS", icon: <SiNodedotjs />, customClass: "node", value: 77 },
+        { id: 4, title: "Node JS", icon: <SiNodedotjs />, customClass: "node", value: 80 },
         { id: 5, title: "React + Vite", icon: <FaReact />, customClass: "react", value: 80 },
         { id: 6, title: "React Native", icon: <TbBrandReactNative />, customClass: "react", value: 75 },
         { id: 7, title: "Express JS", icon: <SiExpress />, customClass: "express", value: 85 },
