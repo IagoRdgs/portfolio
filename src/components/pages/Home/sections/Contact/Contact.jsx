@@ -29,7 +29,7 @@ export default function Contact() {
             <div className={styles.social_media}>
                 <ul className={styles.social_media_list}>
                     <li>
-                        <a href="https://www.linkedin.com/in/iago-hipnos">
+                        <a href="https://www.linkedin.com/in/iago-rdgs">
                             <FaLinkedin />
                         </a>
                     </li>
