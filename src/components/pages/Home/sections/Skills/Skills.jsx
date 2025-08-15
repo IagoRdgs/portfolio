@@ -10,15 +10,15 @@ export default function Skills() {
     const skillData = [
         { id: 1, title: "HTML", icon: <FaHtml5 />, customClass: "html", value: 97 },
         { id: 2, title: "CSS", icon: <FaCss3Alt />, customClass: "css", value: 97 },
-        { id: 3, title: "JavaScript", icon: <FaJs />, customClass: "js", value: 83 },
+        { id: 3, title: "JavaScript", icon: <FaJs />, customClass: "js", value: 84 },
         { id: 4, title: "Node JS", icon: <SiNodedotjs />, customClass: "node", value: 77 },
         { id: 5, title: "React + Vite", icon: <FaReact />, customClass: "react", value: 80 },
-        { id: 6, title: "React Native", icon: <TbBrandReactNative />, customClass: "react", value: 65 },
+        { id: 6, title: "React Native", icon: <TbBrandReactNative />, customClass: "react", value: 75 },
         { id: 7, title: "Express JS", icon: <SiExpress />, customClass: "express", value: 85 },
-        { id: 8, title: "BD/SQL", icon: <FaDatabase />, customClass: "sql", value: 60 },
-        { id: 9, title: "Prisma ORM", icon: <SiPrisma />, customClass: "prisma", value: 65 },
+        { id: 8, title: "BD/SQL", icon: <FaDatabase />, customClass: "sql", value: 70 },
+        { id: 9, title: "Prisma ORM", icon: <SiPrisma />, customClass: "prisma", value: 70 },
         { id: 10, title: "Git/GitHub", icon: <SiGit />, customClass: "git", value: 90 },
-        { id: 11, title: "Axios", icon: <SiAxios />, customClass: "axios", value: 60 },
+        { id: 11, title: "Axios", icon: <SiAxios />, customClass: "axios", value: 75 },
     ];
 
     return (
