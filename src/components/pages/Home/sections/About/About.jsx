@@ -23,7 +23,7 @@ export default function About() {
                         />
                         <Button
                             text="Ir para o GitHub"
-                            href="https://www.github.com/HipnosM"
+                            href="https://www.github.com/IagoRdgs"
                             target="_blank"
                         />
                     </div>

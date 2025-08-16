@@ -14,8 +14,8 @@ const projects = [
         resources: 'HTML, CSS e JavaScript.',
         image: hero_onePiece,
         links: {
-            site: 'https://hipnosm.github.io/op1/',
-            github: 'https://github.com/HipnosM/op1'
+            site: 'https://IagoRdgs.github.io/op1/',
+            github: 'https://github.com/IagoRdgs/op1'
         }
     },
 
@@ -26,8 +26,8 @@ const projects = [
         resources: 'HTML, CSS, JavaScript e jQuery.',
         image: hero_calculadora,
         links: {
-            site: 'https://hipnosm.github.io/calculadoraimc/',
-            github: 'https://github.com/HipnosM/calculadoraimc'
+            site: 'https://IagoRdgs.github.io/calculadoraimc/',
+            github: 'https://github.com/IagoRdgs/calculadoraimc'
         }
     },
 
@@ -38,8 +38,8 @@ const projects = [
         resources: 'HTML, CSS e JavaScript.',
         image: hero_petlife,
         links: {
-            site: 'https://hipnosm.github.io/pet-life/',
-            github: 'https://github.com/HipnosM/pet-life'
+            site: 'https://IagoRdgs.github.io/pet-life/',
+            github: 'https://github.com/IagoRdgs/pet-life'
         }
     },
 
@@ -51,7 +51,7 @@ const projects = [
         image: hero_weForm,
         links: {
             site: 'https://we-form-react.vercel.app',
-            github: 'https://github.com/HipnosM/we-form-react'
+            github: 'https://github.com/IagoRdgs/we-form-react'
         }
     },
 
@@ -62,8 +62,8 @@ const projects = [
         resources: 'React + Vite, HTML, CSS, JavaScript.',
         image: hero_costs,
         links: {
-            site: 'https://costs-hipnosm.vercel.app/',
-            github: 'https://github.com/HipnosM/costs'
+            site: 'https://costs-IagoRdgs.vercel.app/',
+            github: 'https://github.com/IagoRdgs/costs'
         }
     },
 ];
