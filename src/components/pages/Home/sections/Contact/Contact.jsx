@@ -33,11 +33,11 @@ export default function Contact() {
                             <FaLinkedin />
                         </a>
                     </li>
-                    <li>
+                    {/* <li>
                         <a href="https://www.instagram.com/iago__zz" target="_blank">
                             <FaInstagram />
                         </a>
-                    </li>
+                    </li> */}
                     <li>
                         <a href="https://wa.me/5585981463192" target="_blank">
                             <FaWhatsapp />
