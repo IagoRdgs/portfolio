@@ -1,9 +1,9 @@
 import hero_calculadora from "../assets/calculadoraImc.png";
 import hero_petlife from "../assets/petlife.png";
-import hero_draws from "../assets/projectDraws.png";
 import hero_costs from "../assets/costs.png";
 import hero_onePiece from "../assets/onePiece.png";
 import hero_weForm from "../assets/weForm.png";
+import hero_taskmanager from "../assets/taskManager.png";
 
 const projects = [
 
@@ -44,7 +44,7 @@ const projects = [
     },
 
     {
-        id: 5,
+        id: 4,
         name: 'We Form - React',
         description: 'Esse é um rebuild de uma página que fiz num evento da OneBitCode, só que dessa vez decidi refazê-la usando React + Vite, pois foi quando estava iniciando no React.',
         resources: 'React + Vite, HTML, CSS e JavaScript.',
@@ -56,7 +56,7 @@ const projects = [
     },
 
     {
-        id: 6,
+        id: 5,
         name: 'Costs (custos)',
         description: 'Este site permite ao usuário organizar projetos financeiros, agregar serviços e controlar o orçamento de forma simples, fácil e intuitiva. A produção deste projeto proporcionou fixação, prática e aquisição de novos conhecimentos e experiência em desenvolvimento front-end utilizando o react. Este site foi desenvolvido com base nas aulas de "Hora de codar", do professor Matheus Battisti, no entanto, não é uma simples cópia. 😊',
         resources: 'React + Vite, HTML, CSS, JavaScript.',
@@ -66,6 +66,18 @@ const projects = [
             github: 'https://github.com/IagoRdgs/costs'
         }
     },
+
+    {
+        id: 6,
+        name: 'Task Manager',
+        description: 'Task Manager é uma aplicação web para gerenciamento de tarefas, onde o usuário pode criar, editar, excluir e acompanhar o status das suas atividades. O sistema conta com autenticação de usuário, prioridades de tarefas, estatísticas de desempenho e uma interface intuitiva construída com React e Bootstrap. O backend garante persistência de dados e autenticação por token JWT, proporcionando segurança e consistência.',
+        resources: 'React + Vite, React hot toast, Bootstrap, Node + Express, Prisma + Supabase e Axios',
+        image: hero_taskmanager,
+        links: {
+            site: 'https://task-manager-pgpm.vercel.app/',
+            github: 'https://github.com/IagoRdgs/task-manager'
+        }
+    }
 ];
 
 export default projects;
