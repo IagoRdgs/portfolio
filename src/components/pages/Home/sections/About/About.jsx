@@ -1,9 +1,9 @@
 import styles from "./About.module.css";
 
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 import hero from "../../../../../assets/profile.png";
-import curriculo from "../../../../../assets/curriculo.pdf"
 import Button from "../../../../layout/button/Button";
 import { client as SanityClient } from "../../../../../lib/sanity";
 
@@ -24,7 +24,7 @@ export default function About() {
 
     return (
         <>
-            <section id="sobre" className={styles.about_container}>
+            <motion.section animate={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -500 }} transition={{ duration: 1.2 }} id="sobre" className={styles.about_container}>
                 <div className={styles.profile_container}>
                     <img src={hero} alt="hero" />
                 </div>
@@ -46,7 +46,7 @@ export default function About() {
                         />
                     </div>
                 </div>
-            </section>
+            </motion.section>
         </>
     );
 };

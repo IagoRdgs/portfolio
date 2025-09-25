@@ -1,14 +1,15 @@
 import styles from "../Contact/Contact.module.css";
+import { motion } from "framer-motion";
 
 import { Container } from "react-bootstrap";
 import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
     return (
-        <section id="contact" className={styles.contact_container}>
+        <motion.section initial={{ x: -200, y: 250, opacity: 0 }} whileInView={{ x: 0, opacity: 1, y: 0 }} transition={{ duration: .5 }} id="contact" className={styles.contact_container}>
             <Container>
                 <h2>Contato</h2>
-                <div className={styles.contact_content}>
+                <motion.div initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .5 }} className={styles.contact_content}>
                     <p>Envie-me um E-mail</p>
                     <form action="https://formspree.io/f/mgegjaqw" method="POST" className={styles.form_contact}>
                         <div className={styles.input_group}>
@@ -23,7 +24,7 @@ export default function Contact() {
 
                         <button type="submit">Enviar</button>
                     </form>
-                </div>
+                </motion.div>
 
             </Container>
             <div className={styles.social_media}>
@@ -46,6 +47,6 @@ export default function Contact() {
                 </ul>
                 <p>&copy; 2024 Iago Rodrigues. Todos os direitos reservados.</p>
             </div>
-        </section>
+        </motion.section>
     );
 };

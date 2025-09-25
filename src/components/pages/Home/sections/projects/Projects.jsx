@@ -1,6 +1,7 @@
 import styles from "./Projects.module.css";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 import ProjectCard from "./projectCard/ProjectCard";
 import { Container } from "react-bootstrap";
@@ -18,14 +19,14 @@ export default function Projects() {
 
     const fetchProjects = async () => {
         const projects = await SanityClient
-            .fetch(`*[_type == 'project']| order(_createdAt asc){name, description, resources, "imageUrl": image.asset->url, "imageAlt": image.alt, links}`)
+            .fetch(`*[_type == 'project']| order(_createdAt desc){name, description, resources, "imageUrl": image.asset->url, "imageAlt": image.alt, links}`)
             .then((data) => setProjectData(data))
             .catch((error) => console.error("Erro ao buscar projetos:", error));
         return projects;
     };
 
     return (
-        <section id="projects" className={styles.project_container}>
+        <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} id="projects" className={styles.project_container}>
             <Container>
                 <h2>Projetos</h2>
                 <div className={styles.project}>
@@ -37,8 +38,9 @@ export default function Projects() {
                                 setOpenProject(project);
                                 document.body.style.overflow = "hidden";
                             }}
+                            index={index}
                         />
-                    )).reverse()}
+                    ))}
                     {openProject && (
                         <Project
                             project={openProject}
@@ -50,6 +52,6 @@ export default function Projects() {
                     )}
                 </div>
             </Container>
-        </section >
+        </motion.section >
     );
 };
