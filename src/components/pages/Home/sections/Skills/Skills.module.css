@@ -2,11 +2,13 @@
     --html: #E34F26;
     --css: #264de4;
     --react: #61DBFB;
+    --tailwind: #3EBFF8;
     --js: #F7DF1E;
     --git: #F1502F;
     --axios: #671DDF;
     --node: #8CC84B;
-    --express: #292929;
+    --express: #F0D108;
+    --typescript: #3178C6;
     --sql: #00618D;
     --prisma: #0C344B;
     --postgres: #336791;
@@ -124,6 +126,16 @@
     }
 }
 
+.color_tailwind {
+    & svg {
+        color: var(--tailwind);
+    }
+
+    & .bar {
+        background-color: var(--tailwind);
+    }
+}
+
 .color_git {
     & svg {
         color: var(--git);
@@ -147,10 +159,22 @@
 .color_express {
     & svg {
         color: #000;
+        background-color: var(--express);
+        padding: .1em;
     }
 
     & .bar {
         background-color: var(--express);
+    }
+}
+
+.color_typescript {
+    & svg {
+        color: var(--typescript);
+    }
+
+    & .bar {
+        background-color: var(--typescript);
     }
 }
 
