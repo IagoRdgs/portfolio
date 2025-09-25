@@ -10,7 +10,7 @@ const projects = [
     {
         id: 1,
         name: 'One-Piece',
-        description: 'Este é um projeto realizado por meio da participação em um evento do Dev em dobro. O objetivo principal é criar uma interface dinâmica e responsiva, utilizando os principais recursos de HTML, CSS e JavaScript, para uma melhor fixação de conhecimento.',
+        description: 'One-Piece é um projeto desenvolvido durante um evento promovido pelo Dev em Dobro, com foco em reforçar habilidades em desenvolvimento front-end. A proposta foi criar uma interface moderna, interativa e responsiva, inspirada no universo do anime One Piece.\n O projeto foi construído utilizando HTML, CSS e JavaScript puro, com atenção especial ao design visual, responsividade em diferentes dispositivos e manipulação dinâmica de elementos na página.\n Além de colocar em prática conceitos fundamentais da web, esse projeto também serviu como uma excelente oportunidade para aprimorar a lógica de programação, estruturação semântica e estilização avançada com CSS.',
         resources: 'HTML, CSS e JavaScript.',
         image: hero_onePiece,
         links: {

@@ -1,25 +1,24 @@
 import styles from "./Skills.module.css";
 
 import { Container } from "react-bootstrap";
-import { FaCss3Alt, FaDatabase, FaHtml5, FaJs, FaReact } from "react-icons/fa";
-import { TbBrandReactNative } from "react-icons/tb";
-import { SiAxios, SiExpress, SiGit, SiNodedotjs, SiPrisma } from "react-icons/si";
+import { useEffect, useState } from "react";
+import { client as SanityClient } from "../../../../../lib/sanity";
+import iconMap from "../../../../layout/icons";
 
 export default function Skills() {
+    const [skillData, setSkillData] = useState([]);
+   
+    useEffect(() => {
+        fetchSkills();
+    }, []);
 
-    const skillData = [
-        { id: 1, title: "HTML", icon: <FaHtml5 />, customClass: "html", value: 97 },
-        { id: 2, title: "CSS", icon: <FaCss3Alt />, customClass: "css", value: 97 },
-        { id: 3, title: "JavaScript", icon: <FaJs />, customClass: "js", value: 84 },
-        { id: 4, title: "Node JS", icon: <SiNodedotjs />, customClass: "node", value: 80 },
-        { id: 5, title: "React + Vite", icon: <FaReact />, customClass: "react", value: 80 },
-        { id: 6, title: "React Native", icon: <TbBrandReactNative />, customClass: "react", value: 75 },
-        { id: 7, title: "Express JS", icon: <SiExpress />, customClass: "express", value: 85 },
-        { id: 8, title: "BD/SQL", icon: <FaDatabase />, customClass: "sql", value: 70 },
-        { id: 9, title: "Prisma ORM", icon: <SiPrisma />, customClass: "prisma", value: 70 },
-        { id: 10, title: "Git/GitHub", icon: <SiGit />, customClass: "git", value: 90 },
-        { id: 11, title: "Axios", icon: <SiAxios />, customClass: "axios", value: 75 },
-    ];
+    const fetchSkills = async () => {
+        const skills = await SanityClient
+            .fetch("*[_type == 'skill']{title, iconName, value, customClass} | order(value desc)")
+            .then((data) => setSkillData(data))
+            .catch((error) => console.error("Erro ao buscar skills:", error));
+        return skills;
+    }
 
     return (
         <section id="skills" className={styles.skills_container}>
@@ -27,15 +26,18 @@ export default function Skills() {
                 <h2>Skills</h2>
                 <div className={styles.skills} >
                     {skillData.length > 0 ? (
-                        skillData.map((item, index) => (
-                            <SkillItem
-                                key={index}
-                                icon={item.icon}
-                                skill={item.title}
-                                value={item.value}
-                                customClass={`color_${item.customClass}`}
-                            />
-                        ))
+                        skillData.map((item, index) => {
+                            const IconComponent = iconMap[item.iconName];
+                            return (
+                                <SkillItem
+                                    key={index}
+                                    icon={IconComponent ? <IconComponent /> : null}
+                                    skill={item.title}
+                                    value={item.value}
+                                    customClass={`color_${item.customClass}`}
+                                />
+                            );
+                        })
                     ) : (
                         <p>Nenhuma skill para ser exibida.</p>
                     )};

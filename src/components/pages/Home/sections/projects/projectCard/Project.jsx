@@ -16,13 +16,15 @@ export default function Project({ project, onClick }) {
                         <div className={styles.modal_buttons}>
                             <Button
                                 text="Projeto"
-                                href={project.links.site ? project.links.site : null}
+                                href={project.links.site ? project.links.site : "#"}
                                 target="_blank"
+                                rel="noopener noreferrer"
                             />
                             <Button
                                 text="Código"
-                                href={project.links.github ? project.links.github : null}
+                                href={project.links.github ? project.links.github : "#"}
                                 target="_blank"
+                                rel="noopener noreferrer"
                             />
                         </div>
                     </div>
