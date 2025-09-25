@@ -138,14 +138,14 @@
     }
 }
 
-.contact_container .social_media .social_media_list li:nth-child(2) a {
+/* .contact_container .social_media .social_media_list li:nth-child(2) a {
     &:hover {
         background: linear-gradient(#7f37c9, #ff2992, #ff9807);
         transition: all .3s ease;
     }
-}
+} */
 
-.contact_container .social_media .social_media_list li:nth-child(3) a {
+.contact_container .social_media .social_media_list li:nth-child(2) a {
     &:hover {
         background-color: #25D366;
         transition: all .3s ease;
