@@ -1,6 +1,6 @@
 import { FaCss3Alt, FaDatabase, FaHtml5, FaJs, FaReact } from "react-icons/fa";
 import { TbBrandReactNative } from "react-icons/tb";
-import { SiAxios, SiExpress, SiGit, SiNodedotjs, SiPrisma, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiAxios, SiExpress, SiGit, SiNextdotjs, SiNodedotjs, SiPrisma, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 const iconMap = {
     FaHtml5,
@@ -8,6 +8,7 @@ const iconMap = {
     FaJs,
     SiNodedotjs,
     FaReact,
+    SiNextdotjs,
     TbBrandReactNative,
     SiAxios,
     SiExpress,
