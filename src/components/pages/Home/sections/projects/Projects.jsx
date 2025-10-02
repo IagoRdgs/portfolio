@@ -1,7 +1,7 @@
 import styles from "./Projects.module.css";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import ProjectCard from "./projectCard/ProjectCard";
 import { Container } from "react-bootstrap";
@@ -41,15 +41,26 @@ export default function Projects() {
                             index={index}
                         />
                     ))}
-                    {openProject && (
-                        <Project
-                            project={openProject}
-                            onClick={() => {
-                                setOpenProject(null);
-                                document.body.style.overflow = "unset";
-                            }}
-                        />
-                    )}
+                    <AnimatePresence>
+                        {openProject && (
+                            <motion.div
+                                key={openProject._id}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.95 }}
+                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                                className="fixed inset-0 z-50 flex items-center justify-center"
+                            >
+                                <Project
+                                    project={openProject}
+                                    onClick={() => {
+                                        setOpenProject(null);
+                                        document.body.style.overflow = "unset";
+                                    }}
+                                />
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
                 </div>
             </Container>
         </motion.section >
