@@ -5,17 +5,22 @@ import Nav from "../../layout/navigation/Nav";
 import About from "./sections/About/About";
 import Skills from "./sections/Skills/Skills";
 import Projects from "./sections/projects/Projects";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Contact from "./sections/Contact/Contact";
 
 export default function Home() {
-    useEffect(() => {
-        const header = document.querySelector('header');
-        const html = document.querySelector('html');
-        const section = document.querySelector('section');
+    const headerRef = useRef(null);
+    const mainRef = useRef(null);
 
+    useEffect(() => {
+        const header = headerRef.current;
+        const html = document.querySelector('html');
+        const main = mainRef.current;
+
+        if (!header || !main) return;
+
+        main.style.paddingTop = '70px';
         let lastScrollTop = 0;
-        section.style.paddingTop = '70px';
         
         const handleScroll = () => {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -25,8 +30,8 @@ export default function Home() {
             }
             else {
                 header.style.top = '0';
-                html.style.scrollPaddingTop = '70px';
-                section.style.paddingTop = '70px';
+                // html.style.scrollPaddingTop = '70px';
+                // main.style.paddingTop = '70px';
             }
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         };
@@ -42,10 +47,10 @@ export default function Home() {
     return (
         <>
             <Container fluid="xl" style={{ padding: 0 }}>
-                <header>
+                <header ref={headerRef}>
                     <Nav />
                 </header>
-                <main>
+                <main ref={mainRef}>
                     <About />
                     <Skills />
                     <Projects />
