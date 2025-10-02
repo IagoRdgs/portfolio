@@ -1,7 +1,6 @@
 import styles from "./About.module.css";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 
 import hero from "../../../../../assets/profile.png";
 import Button from "../../../../layout/button/Button";

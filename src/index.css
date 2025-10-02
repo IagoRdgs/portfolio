@@ -3,12 +3,6 @@
 @tailwind components;
 @tailwind utilities; */
 
-@layer utilities {
-  .scroll-mt-header {
-    scroll-margin-top: 70px;
-  }
-}
-
 :root {
   font-size: 62.5%;
 }
