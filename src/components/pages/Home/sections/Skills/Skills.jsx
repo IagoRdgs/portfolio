@@ -70,7 +70,7 @@ export default function Skills() {
 
 const SkillItem = ({ icon, skill, customClass, index }) => {
     return (
-        <motion.div initial={{ opacity: 0, y: 100, rotateZ: 15 }} whileInView={{ opacity: 1, y: 0, rotateZ: 0, transition: { duration: .5, delay: index * .15 } }}  viewport={{ once: true }} whileHover={{ scale: 1.05, y: -3, border: "1px solid rgba(122, 23, 121, .5)", transition: { duration: 0.1 } }} className={`${styles.skill_card} ${styles[customClass]}`}>
+        <motion.div initial={{ opacity: 0, y: 100, rotateZ: 15 }} whileInView={{ opacity: 1, y: 0, rotateZ: 0, transition: { duration: .5, delay: index * .15 } }}  viewport={{ once: true }} whileHover={{ scale: 1.05, y: -3, border: "1px solid rgba(255, 255, 255, 0.1)", transition: { duration: 0.1 } }} className={`${styles.skill_card} ${styles[customClass]}`}>
             <div className={styles.card_content}>
                 {icon}
                 <p className={styles.skill_skill}>{skill}</p>
