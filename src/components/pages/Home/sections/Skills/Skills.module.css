@@ -27,14 +27,32 @@
 .skills_container h2 {
     color: #fff;
     font-size: 2.6rem;
+    margin-bottom: 2.4rem;
+}
+
+.skills_container .skill_category {
+    margin-bottom: 4rem;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills_container .skill_category .category_title {
+    color: #A0A0A0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: .5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
 .skills_container .skills {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18rem, max-content));
     gap: 2.4rem;
-    align-items: center;
 }
 
 .skills_container .skills .skill_card {

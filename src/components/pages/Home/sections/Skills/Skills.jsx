@@ -8,16 +8,28 @@ import { client as SanityClient } from "../../../../../lib/sanity";
 import iconMap from "../../../../layout/icons";
 
 export default function Skills() {
-    const [skillData, setSkillData] = useState([]);
-   
+    const [categoriesData, setCategoriesData] = useState([]);
+
     useEffect(() => {
-        fetchSkills();
+        fetchSkillsGrouped();
     }, []);
 
-    const fetchSkills = async () => {
+    const fetchSkillsGrouped = async () => {
+        const query = `*[_type == "skillCategory"]{
+            "id": _id,
+            title,
+            "skills": *[_type == "skill" && references(^._id)] | order(orderRank asc) {
+                _id,
+                title,
+                iconName,
+                customClass
+            }
+        }`;
+
         const skills = await SanityClient
-            .fetch("*[_type == 'skill']{title, iconName, value, customClass} | order(value desc)")
-            .then((data) => setSkillData(data))
+            .fetch(query)
+            .then((data) => data.filter(category => category.skills.length > 0))
+            .then((data) => setCategoriesData(data))
             .catch((error) => console.error("Erro ao buscar skills:", error));
         return skills;
     }
@@ -26,24 +38,31 @@ export default function Skills() {
         <motion.section initial={{ x: -200, opacity: 0 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} viewport={{ once: true }} id="skills" className={styles.skills_container}>
             <Container>
                 <h2>Skills</h2>
-                <div className={styles.skills} >
-                    {skillData.length > 0 ? (
-                        skillData.map((item, index) => {
-                            const IconComponent = iconMap[item.iconName];
-                            return (
-                                <SkillItem
-                                    key={index}
-                                    icon={IconComponent ? <IconComponent /> : null}
-                                    skill={item.title}
-                                    customClass={`color_${item.customClass}`}
-                                    index={index}
-                                />
-                            );
-                        })
-                    ) : (
-                        <p>Nenhuma skill para ser exibida.</p>
-                    )};
-                </div>
+
+                {categoriesData.length > 0 ? (
+                    categoriesData.map((category) => (
+                        <div key={category.id} className={styles.skill_category}>
+                            <h3 className={styles.category_title}>{category.title}</h3>
+
+                            <div className={styles.skills}>
+                                {category.skills.map((skill, index) => {
+                                    const IconComponent = iconMap[skill.iconName] || null;
+                                    return (
+                                        <SkillItem
+                                            key={skill._id}
+                                            icon={IconComponent ? <IconComponent size={48} /> : null}
+                                            skill={skill.title}
+                                            customClass={`color_${skill.customClass}`}
+                                            index={index}
+                                        />
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    ))
+                ) : (
+                    <p>Nenhuma skill para ser exibida.</p>
+                )}
             </Container>
         </motion.section>
     );
