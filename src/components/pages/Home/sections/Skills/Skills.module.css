@@ -31,16 +31,14 @@
 
 .skills_container .skills {
     width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2.4rem;
+    align-items: center;
 }
 
 .skills_container .skills .skill_card {
-    width: 24rem;
-    height: 12rem;
+    min-height: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,25 +61,13 @@
         gap: 1rem;
 
         & svg {
-            font-size: 2.4rem;
+            font-size: 3.6rem;
         }
 
         & p {
             color: #fff;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             margin: 0;
-        }
-    }
-
-    & .bar_box {
-        width: 100%;
-        height: 1.2rem;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: .4rem;
-        overflow: hidden;
-
-        & .bar {
-            height: 100%;
         }
     }
 }
@@ -91,19 +77,11 @@
     & svg {
         color: var(--html);
     }
-
-    & .bar {
-        background-color: var(--html);
-    }
 }
 
 .color_css {
     & svg {
         color: var(--css);
-    }
-
-    & .bar {
-        background-color: var(--css);
     }
 }
 
@@ -111,19 +89,11 @@
     & svg {
         color: var(--js);
     }
-
-    & .bar {
-        background-color: var(--js);
-    }
 }
 
 .color_react {
     & svg {
         color: var(--react);
-    }
-
-    & .bar {
-        background-color: var(--react);
     }
 }
 
@@ -133,19 +103,11 @@
         background-color: var(--nextjs);
         border-radius: 100%;
     }
-
-    & .bar {
-        background-color: var(--nextjs);
-    }
 }
 
 .color_tailwind {
     & svg {
         color: var(--tailwind);
-    }
-
-    & .bar {
-        background-color: var(--tailwind);
     }
 }
 
@@ -153,19 +115,11 @@
     & svg {
         color: var(--git);
     }
-
-    & .bar {
-        background-color: var(--git);
-    }
 }
 
 .color_axios {
     & svg {
         color: var(--axios);
-    }
-
-    & .bar {
-        background-color: var(--axios);
     }
 }
 
@@ -175,19 +129,11 @@
         background-color: var(--express);
         padding: .1em;
     }
-
-    & .bar {
-        background-color: var(--express);
-    }
 }
 
 .color_typescript {
     & svg {
         color: var(--typescript);
-    }
-
-    & .bar {
-        background-color: var(--typescript);
     }
 }
 
@@ -195,19 +141,11 @@
     & svg {
         color: var(--prisma);
     }
-
-    & .bar {
-        background-color: var(--prisma);
-    }
 }
 
 .color_node {
     & svg {
         color: var(--node);
-    }
-
-    & .bar {
-        background-color: var(--node);
     }
 }
 
@@ -215,18 +153,10 @@
     & svg {
         color: var(--sql);
     }
-
-    & .bar {
-        background-color: var(--sql);
-    }
 }
 
 .color_pg {
     & svg {
         color: var(--postgres);
-    }
-
-    & .bar {
-        background-color: var(--postgres);
     }
 }
