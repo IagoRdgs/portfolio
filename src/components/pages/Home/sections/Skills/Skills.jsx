@@ -41,7 +41,7 @@ export default function Skills() {
 
                 {categoriesData.length > 0 ? (
                     categoriesData.map((category) => (
-                        <div key={category.id} className={styles.skill_category}>
+                        <motion.div initial={{ opacity: 0, y: 100, rotateZ: 15 }} whileInView={{ opacity: 1, y: 0, rotateZ: 0 }} transition={{ duration: 1 }} viewport={{ once: true }} key={category.id} className={styles.skill_category}>
                             <h3 className={styles.category_title}>{category.title}</h3>
 
                             <div className={styles.skills}>
@@ -58,7 +58,7 @@ export default function Skills() {
                                     );
                                 })}
                             </div>
-                        </div>
+                        </motion.div>
                     ))
                 ) : (
                     <p>Nenhuma skill para ser exibida.</p>
