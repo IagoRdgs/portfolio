@@ -19,7 +19,7 @@ export default function Projects() {
 
     const fetchProjects = async () => {
         const projects = await SanityClient
-            .fetch(`*[_type == 'project']| order(_createdAt desc){name, description, resources, "imageUrl": image.asset->url, "imageAlt": image.alt, links}`)
+            .fetch(`*[_type == 'project']| order(orderRank asc){name, description, resources, "imageUrl": image.asset->url, "imageAlt": image.alt, links}`)
             .then((data) => setProjectData(data))
             .catch((error) => console.error("Erro ao buscar projetos:", error));
         return projects;
